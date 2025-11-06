@@ -1,8 +1,8 @@
 import express from 'express';
 
-import * as reservasController from '../controllers/reservas.controller.js';
+import * as favoritosController from '../controllers/favoritos.controller.js';
 const router = express.Router();
-router.get('/', reservasController.listarReservas);
-router.post('/', reservasController.criarReserva);
-router.delete('/:id', reservasController.excluirReserva);
+router.get('/', favoritosController.listarFavoritos);
+router.post('/', favoritosController.adicionarFavorito);
+router.delete('/:id', favoritosController.removerFavorito);
 export default router;
