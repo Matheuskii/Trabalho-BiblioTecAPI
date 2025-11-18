@@ -1,8 +1,17 @@
-import express from 'express';
+import express from "express";
+import {listarFavoritos,
+        criarFavoritos,
+        deletarFavorito
+    }from "../controllers/favoritos.controller.js";
 
-import * as favoritosController from '../controllers/favoritos.controller.js';
+
 const router = express.Router();
-router.get('/', favoritosController.listarFavoritos);
-router.post('/', favoritosController.adicionarFavorito);
-router.delete('/:id', favoritosController.removerFavorito);
+
+router.get("/", listarFavoritos);
+router.post("/", criarFavoritos);
+router.delete("/:id", deletarFavorito);
+
+
 export default router;
+
+

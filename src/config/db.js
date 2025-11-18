@@ -1,5 +1,4 @@
 import mysql from "mysql2/promise";
-
 // ============================
 //  Conexão com o MariaDB
 // ============================

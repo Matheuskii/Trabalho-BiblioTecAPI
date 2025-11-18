@@ -1,9 +1,11 @@
-import express from 'express';
+import express from "express";
 
-import * as reservasController from '../controllers/reservas.controller.js';
+import { listarReservas,criarReserva,excluirReserva  } from "../controllers/reservas.controller.js";
+
 const router = express.Router();
 
-router.get('/', reservasController.listarReservas);
-router.post('/', reservasController.criarReserva);
-router.delete('/:id', reservasController.excluirReserva);
+router.get("/", listarReservas);
+router.post("/", criarReserva);
+router.delete("/:id", excluirReserva);
+
 export default router;
